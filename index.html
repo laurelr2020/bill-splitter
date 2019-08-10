@@ -1,33 +1,27 @@
 <!DOCTYPE html>
     <head>
-        <title>Bill Splitter</title>
+        <title>Tip Calculator</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <div class="wrapper">
             <div class="header">
-                Bill Splitter
+                Tip Calculator
             </div>
             
             <form class="insert">
-                <label id="totalL"><i class="fas fa-coins"></i> How much?</label>
-                <input type="number" id="total" placeholder="add the total">
+                <label id="totalL"><i class="fas fa-coins"></i> Bill Amount</label>
+                <input type="number" id="total" placeholder="bill total">
                 
-                <label id="totalL"><i class="fas fa-users"></i> How many?</label>
-                <input type="number" id="people" placeholder="add the number of people">
+                <label id="totalL">Tip Percentage</label>
+                <input type="number" id="tipPercent" placeholder="add % of the total">
             
-                <label id="tipL"><i class="fas fa-heart"></i> Feelin' generous? <button id="addTip">Add a tip</button></label>
-
-                <div id="tipInput">
-                    <input type="number" id="tipPercent" placeholder="add % of the total">
-                </div>
-
                 <div class="buttonSpace">
-                    <button id="splitBtn">Split!</button>
+                    <button id="addBtn">Add</button>
                     <button id="resetBtn">Reset</button>
                 </div>
 
-                <div id="perPerson">0</div>
+                <div id="totalTip">$0</div>
             </form>
         </div>
     </body>
