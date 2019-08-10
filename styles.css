@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Roboto+Condensed|Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #20bf55;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #fbfbff;
+}
+.wrapper {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: #0b4f6c;
+    color: #aaaaaa;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    font-size: 4rem;
+    font-family: 'Concert One', cursive;
+    margin-bottom: 2rem;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 59% 70%, 50% 100%, 39% 70%, 0 70%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 59% 70%, 50% 100%, 39% 70%, 0 70%);
+}
+
+form {
+    margin: 0 auto;
+    border: 5px dashed #aaaaaa;
+    width: 35%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: #0b4f6c;
+}
+label {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+input {
+    margin: .8rem 2rem 2rem 0;
+    display: block;
+    font-size: 1.1rem;
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    border-bottom: 1px solid #aaaaaa;
+    width: 75%;
+}
+input::placeholder {
+    color: #aaaaaa;
+}
+input:focus {
+    outline:none;
+}
+
+#addTip {
+    border: none;
+    background-color: #0b4f6c;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #fbfbff;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#addTip:hover {
+    color: #20bf55;
+}
+
+#tipPercent{
+    margin-bottom: .5rem;
+}
+
+.buttonSpace {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.buttonSpace button {
+    margin-top: .6rem;
+    border-radius: 10px;
+    display: inline-block;
+    padding: .5rem 4rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+}
+
+#addBtn {
+    transition: .3s;
+    background-color: #20bf55;
+    color: #fbfbff;
+}
+#addBtn:hover {
+    border: 1px solid #53BD9C;
+    background-color: #fbfbff;
+    letter-spacing: .4rem;
+    color: #20bf55;
+    }
+#resetBtn {
+    background-color: #aaaaaa;
+    color: #fbfbff;
+}
+
+#totalTip {
+    padding-top: 1.5rem;
+    font-family: 'Concert One', cursive;
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+    color: #20bf55;
+}
+
+footer {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+/*  =============== . MEDIA QUERIES ============ */
+@media screen and (max-width: 992px) {
+    .insert {
+        width: 80%;
+    }
+    label {
+        display: block;
+    }
+
+    #submit {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .insert {
+    width: 90%;
+    }
+
+    .buttonSpace button {
+        width: 90%;
+        display: inline-table;
+    }
+}
