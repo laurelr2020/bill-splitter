@@ -40,10 +40,6 @@ label {
     font-size: 1.5rem;
     margin-right: 1.5rem;
 }
-.fas {
-    font-size: 1rem;
-    margin-right: .4rem;
-}
 
 input {
     margin: .8rem 2rem 2rem 0;
@@ -69,23 +65,14 @@ input:focus {
     color: #fbfbff;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
 #addTip:hover {
     color: #20bf55;
 }
-#tipInput {
-    display: none;
-    transition: display 3s ease-in;
-    -webkit-transition: display 3s ease-in;
-}
+
 #tipPercent{
     margin-bottom: .5rem;
 }
-#switchTip {
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    border: none;
-}
+
 .buttonSpace {
     margin-top: 1rem;
     width: 100%;
@@ -99,6 +86,7 @@ input:focus {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.2rem;
 }
+
 #addBtn {
     transition: .3s;
     background-color: #20bf55;
@@ -114,6 +102,7 @@ input:focus {
     background-color: #aaaaaa;
     color: #fbfbff;
 }
+
 #totalTip {
     padding-top: 1.5rem;
     font-family: 'Concert One', cursive;
