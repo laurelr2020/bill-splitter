@@ -1,1 +1,1 @@
-# bill-splitter
+# tip-calculator
