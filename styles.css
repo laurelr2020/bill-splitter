@@ -11,6 +11,7 @@ body {
 }
 .wrapper {
     width: 100%;
+    margin-bottom: 2em;
 }
 
 .header {
@@ -119,12 +120,7 @@ footer {
     color: #01baef;
     width: 100%;
 }
-footer .hint-percent-label{
-    float: left;
-}
-footer .hint-percent-tip{
-    float: right;
-}
+
 div #ten-percent, t#en-percent-tip{
     margin: 0 auto;
     width: 100%;
@@ -153,5 +149,9 @@ div #ten-percent, t#en-percent-tip{
     .buttonSpace button {
         width: 90%;
         display: inline-table;
+    }
+
+    .header{
+        font-size: 3em;
     }
 }
