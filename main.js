@@ -22,10 +22,16 @@ const addButton = document.getElementById("addBtn");
         })
 
 function getTip(tipNum){
-    return (tipNum / 100).toFixed(2);
+    return roundCorrectlyPlease((tipNum / 100));
 }
 
-function getTotal(bill, tip){
-    let tipAmount = Math.floor((bill * tip).toFixed(2));
-    return bill + parseFloat(tipAmount);
+function getTotal(bill, tipPercent){
+    let tip = roundCorrectlyPlease(bill * tipPercent);
+    return bill + tip;
+}
+
+function roundCorrectlyPlease(num){
+    let prepareToBeRounded = (num * 10).toFixed(20);
+    let roundedTip = Math.round(prepareToBeRounded * 10) / 100;
+    return roundedTip;
 }
