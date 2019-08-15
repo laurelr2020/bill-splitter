@@ -11,7 +11,6 @@ const calculate = function() {
     console.log("Bill: " + bill);
     console.log("Tip: " + tip);
     console.log("Total:" + total.innerHTML );
-
 }
 
 const addButton = document.getElementById("addBtn");
@@ -19,6 +18,14 @@ const addButton = document.getElementById("addBtn");
         function (e) {
             e.preventDefault();
             calculate();
+        })
+
+const resetButton = document.getElementById("resetBtn");
+        resetButton.addEventListener("click", 
+        function (e){
+            e.preventDefault();
+            document.querySelector("form").reset();
+            document.getElementById("total").innerHTML = "$0";
         })
 
 function getTip(tipNum){
