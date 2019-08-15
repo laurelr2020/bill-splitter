@@ -1,3 +1,5 @@
+'use strict'
+
 const calculate = function() {
     let bill = parseFloat(document.getElementById("bill-input").value);
     let tip = parseInt(document.getElementById("tip-input").value);
@@ -9,6 +11,13 @@ const calculate = function() {
     }
 }
 
+const billInput = document.getElementById("bill-input");
+    billInput.addEventListener("change", 
+        function(){
+            let bill = parseFloat(document.getElementById("bill-input").value);
+            getTipHints(bill);
+        })
+
 const addButton = document.getElementById("addBtn");
     addButton.addEventListener("click", 
         function (e) {
@@ -17,7 +26,7 @@ const addButton = document.getElementById("addBtn");
         })
 
 const resetButton = document.getElementById("resetBtn");
-        resetButton.addEventListener("click", 
+    resetButton.addEventListener("click", 
         function (e){
             e.preventDefault();
             document.querySelector("form").reset();
@@ -37,4 +46,15 @@ function roundCorrectlyPlease(num){
     let prepareToBeRounded = (num * 10).toFixed(20);
     let roundedTip = Math.round(prepareToBeRounded * 10) / 100;
     return roundedTip;
+}
+
+function getTipHints(bill){
+    let hints = document.getElementById("tip-hints");
+    let ten = roundCorrectlyPlease(bill * (.10));
+    let fifteen = roundCorrectlyPlease(bill * (.15));
+    let twenty = roundCorrectlyPlease(bill * (.20));
+
+    hints.innerHTML = "10%: $" + ten + " | 15%: $" + fifteen + " | 20%: $" + twenty;
+
+    document.querySelector("footer").removeAttribute("hidden");
 }
