@@ -7,10 +7,6 @@ const calculate = function() {
         let tipPercent = getTip(tip);
         total.innerHTML = "$" + getTotal(bill, tipPercent);
     }
-
-    console.log("Bill: " + bill);
-    console.log("Tip: " + tip);
-    console.log("Total:" + total.innerHTML );
 }
 
 const addButton = document.getElementById("addBtn");
