@@ -1,3 +1,5 @@
+'use strict'
+
 const calculate = function() {
     let bill = parseFloat(document.getElementById("bill-input").value);
     let tip = parseInt(document.getElementById("tip-input").value);
@@ -7,11 +9,14 @@ const calculate = function() {
         let tipPercent = getTip(tip);
         total.innerHTML = "$" + getTotal(bill, tipPercent);
     }
-
-    console.log("Bill: " + bill);
-    console.log("Tip: " + tip);
-    console.log("Total:" + total.innerHTML );
 }
+
+const billInput = document.getElementById("bill-input");
+    billInput.addEventListener("change", 
+        function(){
+            let bill = parseFloat(document.getElementById("bill-input").value);
+            getTipHints(bill);
+        })
 
 const addButton = document.getElementById("addBtn");
     addButton.addEventListener("click", 
@@ -21,11 +26,12 @@ const addButton = document.getElementById("addBtn");
         })
 
 const resetButton = document.getElementById("resetBtn");
-        resetButton.addEventListener("click", 
+    resetButton.addEventListener("click", 
         function (e){
             e.preventDefault();
             document.querySelector("form").reset();
             document.getElementById("total").innerHTML = "$0";
+            document.getElementById("footer").hidden = true;
         })
 
 function getTip(tipNum){
@@ -41,4 +47,15 @@ function roundCorrectlyPlease(num){
     let prepareToBeRounded = (num * 10).toFixed(20);
     let roundedTip = Math.round(prepareToBeRounded * 10) / 100;
     return roundedTip;
+}
+
+function getTipHints(bill){
+    let hints = document.getElementById("tip-hints");
+    let ten = roundCorrectlyPlease(bill * (.10));
+    let fifteen = roundCorrectlyPlease(bill * (.15));
+    let twenty = roundCorrectlyPlease(bill * (.20));
+
+    hints.innerHTML = "10%: $" + ten + " | 15%: $" + fifteen + " | 20%: $" + twenty;
+
+    document.querySelector("footer").removeAttribute("hidden");
 }
