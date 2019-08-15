@@ -15,7 +15,12 @@ const billInput = document.getElementById("bill-input");
     billInput.addEventListener("change", 
         function(){
             let bill = parseFloat(document.getElementById("bill-input").value);
-            getTipHints(bill);
+            if(!isNaN(bill)){
+                getTipHints(bill);
+            }
+            if(isNaN(bill)){
+                document.getElementById("footer").hidden = true;
+            }
         })
 
 const addButton = document.getElementById("addBtn");
