@@ -5,7 +5,7 @@ const calculate = function() {
     let tip = parseInt(document.getElementById("tip-input").value);
     let total = document.getElementById("total");
 
-    if(bill !== "" && tip !== ""){
+    if(!isNaN(bill) && !isNaN(tip)){
         let tipPercent = getTip(tip);
         total.innerHTML = "$" + getTotal(bill, tipPercent);
     }
@@ -15,12 +15,10 @@ const billInput = document.getElementById("bill-input");
     billInput.addEventListener("change", 
         function(){
             let bill = parseFloat(document.getElementById("bill-input").value);
-            if(!isNaN(bill)){
-                getTipHints(bill);
-            }
-            if(isNaN(bill)){
+            if(isNaN(bill))
                 document.getElementById("footer").hidden = true;
-            }
+            else
+                getTipHints(bill);
         })
 
 const addButton = document.getElementById("addBtn");
