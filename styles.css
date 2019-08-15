@@ -129,7 +129,7 @@ div #ten-percent, t#en-percent-tip{
 
 /*  =============== . MEDIA QUERIES ============ */
 @media screen and (max-width: 992px) {
-    .insert {
+    .tip-form {
         width: 80%;
     }
     label {
@@ -142,7 +142,7 @@ div #ten-percent, t#en-percent-tip{
 }
 
 @media screen and (max-width: 600px) {
-    .insert {
+    .tip-form {
     width: 90%;
     }
 
