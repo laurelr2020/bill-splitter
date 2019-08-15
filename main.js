@@ -31,6 +31,7 @@ const resetButton = document.getElementById("resetBtn");
             e.preventDefault();
             document.querySelector("form").reset();
             document.getElementById("total").innerHTML = "$0";
+            document.getElementById("footer").hidden = true;
         })
 
 function getTip(tipNum){
