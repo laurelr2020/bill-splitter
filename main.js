@@ -50,7 +50,7 @@ function getTotal(bill, tip){
 
 function roundCorrectlyPlease(num){
     let prepareToBeRounded = (num * 10).toFixed(20);
-    let roundedNum= Math.round(prepareToBeRounded * 10) / 100;
+    let roundedNum = Math.round(prepareToBeRounded * 10) / 100;
     return roundedNum;
 }
 
