@@ -6,8 +6,9 @@ const calculate = function() {
     let total = document.getElementById("total");
 
     if(!isNaN(bill) && !isNaN(tip)){
-        let tipPercent = getTip(tip);
-        total.innerHTML = "$" + getTotal(bill, tipPercent);
+        let tipAmount= getTip(tip, bill);
+        total.innerHTML = "Tip: " + tipAmount + "<br>Total: $" + getTotal(bill, tipAmount);
+        document.getElementById("total-div").hidden = false
     }
 }
 
@@ -33,23 +34,24 @@ const resetButton = document.getElementById("resetBtn");
         function (e){
             e.preventDefault();
             document.querySelector("form").reset();
-            document.getElementById("total").innerHTML = "$0";
+            document.getElementById("total-div").hidden = true;
             document.getElementById("footer").hidden = true;
         })
 
-function getTip(tipNum){
-    return roundCorrectlyPlease((tipNum / 100));
+function getTip(tip, bill){
+    let tipPercent = roundCorrectlyPlease((tip / 100));
+    let tipAmount = roundCorrectlyPlease(bill * tipPercent);
+    return tipAmount;
 }
 
-function getTotal(bill, tipPercent){
-    let tip = roundCorrectlyPlease(bill * tipPercent);
+function getTotal(bill, tip){
     return bill + tip;
 }
 
 function roundCorrectlyPlease(num){
     let prepareToBeRounded = (num * 10).toFixed(20);
-    let roundedTip = Math.round(prepareToBeRounded * 10) / 100;
-    return roundedTip;
+    let roundedNum = Math.round(prepareToBeRounded * 10) / 100;
+    return roundedNum;
 }
 
 function getTipHints(bill){
