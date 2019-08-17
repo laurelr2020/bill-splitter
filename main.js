@@ -7,7 +7,7 @@ const calculate = function() {
 
     if(!isNaN(bill) && !isNaN(tip)){
         let tipAmount= getTip(tip, bill);
-        total.innerHTML = "Tip: " + tipAmount + "<br>Total: $" + getTotal(bill, tipAmount);
+        total.innerHTML = "Tip: $" + tipAmount + "<br>Total: $" + getTotal(bill, tipAmount);
         document.getElementById("total-div").hidden = false
     }
 }
