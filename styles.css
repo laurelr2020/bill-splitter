@@ -128,7 +128,7 @@ div #ten-percent, t#en-percent-tip{
 
 
 /*  =============== . MEDIA QUERIES ============ */
-@media screen and (max-width: 992px) and (-webkit-min-device-pixel-ratio:0){
+@media screen and (max-width: 992px){
     .tip-form {
         width: 80%;
     }
@@ -141,7 +141,7 @@ div #ten-percent, t#en-percent-tip{
     }
 }
 
-@media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio:0){
+@media screen and (max-width: 600px) {
     .tip-form {
     width: 90%;
     }
