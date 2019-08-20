@@ -130,8 +130,6 @@ div #ten-percent, t#en-percent-tip{
     position: relative;
 }
 
-
-
 /*  =============== . MEDIA QUERIES ============ */
 @media screen and (max-width: 992px){
     .tip-form {
