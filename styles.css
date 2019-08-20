@@ -107,7 +107,7 @@ input:focus {
 #total {
     padding-top: 1.5rem;
     font-family: 'Concert One', cursive;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
     text-align: center;
     color: #20bf55;
@@ -125,6 +125,11 @@ div #ten-percent, t#en-percent-tip{
     margin: 0 auto;
     width: 100%;
 }
+
+.floated-label-wrapper {
+    position: relative;
+}
+
 
 
 /*  =============== . MEDIA QUERIES ============ */
