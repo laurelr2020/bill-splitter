@@ -45,7 +45,7 @@ function getTip(tip, bill){
 }
 
 function getTotal(bill, tip){
-    return bill + tip;
+    return roundCorrectlyPlease((bill+tip));
 }
 
 function roundCorrectlyPlease(num){
